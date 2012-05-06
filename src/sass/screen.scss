@@ -7,6 +7,7 @@
 @import "compass/css3/transform";
 @import "compass/css3/opacity";
 @import "compass/css3/transition";
+@import "compass/css3/text-shadow";
 
 $headerbg: #E2E4CB;
 $bodybg: #C5D8D7;
@@ -21,7 +22,7 @@ $main-width: 960px;
 @font-face { font-family: "League Gothic"; src: url('../league-gothic.otf'); } 
 
 body {
-    background-color: $bodybg;
+    background: transparent url(../images/noisy-blue-bg.png);
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     text-rendering: optimizeLegibility;
 }
@@ -53,12 +54,13 @@ li {
 
 
 header[role="banner"] {
-    background-color: $headerbg;
+    background-image: url(../images/noisy-yellow-bg.png);
     height: 12em;
     border-bottom: 0.25em solid $strikecolor;
     padding-top: 2em;
     
     h1 {
+        @include single-text-shadow(rgba(0, 0, 0, 0.3), 1px, 1px, 1px);
         text-align: center;
         font-size: 12em;
         color: $headercolor;
@@ -143,7 +145,6 @@ section[role="main"] {
             border-bottom: 3px solid $strikecolor;
             margin-bottom: 0.5em;
             margin-top: 0em;
-            border-radius: 5px;
         }
 
         figure {
@@ -157,7 +158,7 @@ section[role="main"] {
 
 footer[role="contentinfo"] {
     margin-top: 3em;
-    background-color: $headerbg;
+    background-image: url(../images/noisy-yellow-bg.png);
     height: 3em;
     border-top: 0.25em solid $strikecolor;
     text-align: center;
