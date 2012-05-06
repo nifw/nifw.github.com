@@ -75,7 +75,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* line 23, ../sass/screen.scss */
 body {
-  background-color: #a7dbd8;
+  background-color: #c5d8d7;
   font-family: Futura, "Trebuchet MS", Arial, sans-serif;
   text-rendering: optimizeLegibility;
 }
@@ -97,7 +97,7 @@ p, li {
 
 /* line 41, ../sass/screen.scss */
 a {
-  color: #19889e;
+  color: #3887bf;
 }
 
 /* line 45, ../sass/screen.scss */
@@ -113,16 +113,16 @@ li {
 
 /* line 55, ../sass/screen.scss */
 header[role="banner"] {
-  background-color: #e0e4cc;
+  background-color: #e2e4cb;
   height: 12em;
-  border-bottom: 0.25em solid #69d2e7;
+  border-bottom: 0.25em solid #aacde6;
   padding-top: 2em;
 }
 /* line 61, ../sass/screen.scss */
 header[role="banner"] h1 {
   text-align: center;
   font-size: 12em;
-  color: #fa6900;
+  color: #c07810;
   text-transform: uppercase;
   vertical-align: middle;
   font-family: "League Gothic";
@@ -130,7 +130,7 @@ header[role="banner"] h1 {
 /* line 69, ../sass/screen.scss */
 header[role="banner"] h1 .isfor {
   font-size: 0.5em;
-  color: #f38630;
+  color: #c49031;
   position: relative;
   top: -0.25em;
   letter-spacing: -1px;
@@ -138,20 +138,20 @@ header[role="banner"] h1 .isfor {
 /* line 77, ../sass/screen.scss */
 header[role="banner"] h1 .quote-lever {
   font-size: 0.25em;
-  color: #f38630;
+  color: #c49031;
   text-decoration: none;
 }
 /* line 82, ../sass/screen.scss */
 header[role="banner"] h1 .quote-lever:hover {
-  color: #fa6900;
+  color: #c07810;
 }
 
 /* line 89, ../sass/screen.scss */
 .no-is-for-wimps {
   display: none;
-  background-color: #265d5a;
+  background-color: #405e5d;
   color: #FAFAFA;
-  border-bottom: 3px solid #69d2e7;
+  border-bottom: 3px solid #aacde6;
   padding: 0.25em;
 }
 /* line 96, ../sass/screen.scss */
@@ -206,7 +206,7 @@ section[role="main"] article h2 {
   font-size: 2.5em;
   font-family: "League Gothic";
   letter-spacing: 2px;
-  border-bottom: 3px solid #69d2e7;
+  border-bottom: 3px solid #aacde6;
   margin-bottom: 0.5em;
   margin-top: 0em;
   border-radius: 5px;
@@ -215,15 +215,15 @@ section[role="main"] article h2 {
 section[role="main"] article figure {
   float: left;
   margin: 0 0.5em 0.5em 0;
-  border: 3px solid #69d2e7;
+  border: 3px solid #aacde6;
 }
 
 /* line 158, ../sass/screen.scss */
 footer[role="contentinfo"] {
   margin-top: 3em;
-  background-color: #e0e4cc;
+  background-color: #e2e4cb;
   height: 3em;
-  border-top: 0.25em solid #69d2e7;
+  border-top: 0.25em solid #aacde6;
   text-align: center;
   padding-top: 1.5em;
   font-size: 0.75em;
@@ -258,5 +258,5 @@ footer[role="contentinfo"] {
   right: 0;
   padding: 0.5em;
   font-size: 0.8em;
-  color: #fa6900;
+  color: #c07810;
 }

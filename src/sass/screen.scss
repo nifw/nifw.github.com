@@ -8,13 +8,13 @@
 @import "compass/css3/opacity";
 @import "compass/css3/transition";
 
-$linkcolor: darken(#69D2E7, 30%);
-$headerbg: #E0E4CC;
-$bodybg: #A7DBD8;
+$headerbg: #E2E4CB;
+$bodybg: #C5D8D7;
 $bodycolor: #333;
-$strikecolor: #69D2E7;
-$headercolor: #FA6900;
-$headersoftcolor: #F38630;
+$strikecolor: #AACDE6;
+$linkcolor: darken($strikecolor, 30%);
+$headercolor: #C07810;
+$headersoftcolor: #C49031;
 $mainbg: #FFFFFF;
 $main-width: 960px;
 
