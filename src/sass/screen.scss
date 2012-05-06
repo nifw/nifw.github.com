@@ -1,0 +1,159 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/css3/transform";
+@import "compass/css3/opacity";
+
+$linkcolor: darken(#69D2E7, 30%);
+$headerbg: #E0E4CC;
+$bodybg: #A7DBD8;
+$bodycolor: #333;
+$strikecolor: #69D2E7;
+$headercolor: #FA6900;
+$headersoftcolor: #F38630;
+$mainbg: #FFFFFF;
+$main-width: 960px;
+
+// @font-face { font-family: "League Gothic"; src: url('../league-gothic.otf'); } 
+
+body {
+    background-color: $bodybg;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    text-rendering: optimizeLegibility;
+}
+
+strong {
+    font-weight: bold;
+}
+
+p {
+    margin: 0 0 1.4em 0;
+}
+
+p, li {
+    line-height: 1.4;
+}
+
+a {
+    color: $linkcolor;
+}
+
+ul {
+    padding-left: 1em;
+    margin: 1em 0 1em 2em;
+}
+
+li {
+    list-style-type: disc;
+}
+
+
+header[role="banner"] {
+    background-color: $headerbg;
+    height: 12em;
+    border-bottom: 0.25em solid $strikecolor;
+    padding-top: 2em;
+    
+    h1 {
+        text-align: center;
+        font-size: 12em;
+        color: $headercolor;
+        text-transform: uppercase;
+        vertical-align: middle;
+        font-family: "League Gothic";
+        
+        .isfor {
+            font-size: 0.5em;
+            color: $headersoftcolor;
+            position: relative;
+            top: -0.25em;
+            letter-spacing: -1px;
+        }
+    }
+}
+
+.main-wrap {
+    width: $main-width;
+    margin: 1em auto;
+}
+
+
+.jagged {
+    background: transparent url(../images/jagged-paper.png) 0 0 repeat-x;
+    height: 17px;
+}
+
+.jagged-bottom {
+    @include rotateX(180deg);
+}
+
+section[role="main"] {
+    background-color: $mainbg;
+    padding: 1em;
+
+    article {
+        color: $bodycolor;
+        
+        margin-bottom: 2em;
+        
+        h2 {
+            font-size: 2.5em;
+            font-family: "League Gothic";
+            letter-spacing: 2px;
+            border-bottom: 3px solid $strikecolor;
+            margin-bottom: 0.5em;
+            margin-top: 0em;
+            border-radius: 5px;
+        }
+
+        figure {
+            float: left;
+            margin: 0 0.5em 0.5em 0;
+            border: 3px solid $strikecolor;
+        }
+        
+    }
+}
+
+footer[role="contentinfo"] {
+    margin-top: 3em;
+    background-color: $headerbg;
+    height: 3em;
+    border-top: 0.25em solid $strikecolor;
+    text-align: center;
+    padding-top: 1.5em;
+    font-size: 0.75em;
+    color: lighten($bodycolor, 30%);
+}
+
+
+.social-links {
+    text-align: center;
+    margin-top: 3em;
+    
+    a {
+        text-indent: -9999px;
+        display: inline-block;
+        width: 42px;
+        height: 40px;
+        background: transparent url(../images/twitterbird-white.png) center center no-repeat;
+        @include opacity(0.3);
+        
+    }
+    
+    a:hover {
+        @include opacity(1);
+    }
+}
+
+.login-note {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5em;
+    font-size: 0.8em;
+    color: $headercolor;
+}
