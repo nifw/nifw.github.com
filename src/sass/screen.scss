@@ -6,6 +6,7 @@
 @import "compass/reset";
 @import "compass/css3/transform";
 @import "compass/css3/opacity";
+@import "compass/css3/transition";
 
 $linkcolor: darken(#69D2E7, 30%);
 $headerbg: #E0E4CC;
@@ -17,7 +18,7 @@ $headersoftcolor: #F38630;
 $mainbg: #FFFFFF;
 $main-width: 960px;
 
-// @font-face { font-family: "League Gothic"; src: url('../league-gothic.otf'); } 
+@font-face { font-family: "League Gothic"; src: url('../league-gothic.otf'); } 
 
 body {
     background-color: $bodybg;
@@ -72,6 +73,42 @@ header[role="banner"] {
             top: -0.25em;
             letter-spacing: -1px;
         }
+        
+        .quote-lever {
+            font-size: 0.25em;
+            color: $headersoftcolor;
+            text-decoration: none;
+            
+            &:hover {
+                color: $headercolor;
+            }
+        }
+    }
+}
+
+.no-is-for-wimps {
+    display: none;
+    background-color: darken($bodybg, 50%);
+    color: #FAFAFA;
+    border-bottom: 3px solid $strikecolor;
+    padding: 0.25em;
+    
+    blockquote {
+        width: $main-width * 0.75;
+        margin: 1em auto;
+        font-family: "Georgia";
+        font-size: 1.2em;
+        line-height: 1.7em;
+
+        &:before {
+            content: "“";
+            font-size: 10em;
+            position: absolute;
+            margin-left: -0.5em;
+            margin-top: 0.3em;
+            @include opacity(0.2);
+        }
+
     }
 }
 

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
@@ -67,52 +68,57 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 22, ../sass/screen.scss */
+@font-face {
+  font-family: "League Gothic";
+  src: url("../league-gothic.otf");
+}
+
+/* line 23, ../sass/screen.scss */
 body {
   background-color: #a7dbd8;
   font-family: Futura, "Trebuchet MS", Arial, sans-serif;
   text-rendering: optimizeLegibility;
 }
 
-/* line 28, ../sass/screen.scss */
+/* line 29, ../sass/screen.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 32, ../sass/screen.scss */
+/* line 33, ../sass/screen.scss */
 p {
   margin: 0 0 1.4em 0;
 }
 
-/* line 36, ../sass/screen.scss */
+/* line 37, ../sass/screen.scss */
 p, li {
   line-height: 1.4;
 }
 
-/* line 40, ../sass/screen.scss */
+/* line 41, ../sass/screen.scss */
 a {
   color: #19889e;
 }
 
-/* line 44, ../sass/screen.scss */
+/* line 45, ../sass/screen.scss */
 ul {
   padding-left: 1em;
   margin: 1em 0 1em 2em;
 }
 
-/* line 49, ../sass/screen.scss */
+/* line 50, ../sass/screen.scss */
 li {
   list-style-type: disc;
 }
 
-/* line 54, ../sass/screen.scss */
+/* line 55, ../sass/screen.scss */
 header[role="banner"] {
   background-color: #e0e4cc;
   height: 12em;
   border-bottom: 0.25em solid #69d2e7;
   padding-top: 2em;
 }
-/* line 60, ../sass/screen.scss */
+/* line 61, ../sass/screen.scss */
 header[role="banner"] h1 {
   text-align: center;
   font-size: 12em;
@@ -121,7 +127,7 @@ header[role="banner"] h1 {
   vertical-align: middle;
   font-family: "League Gothic";
 }
-/* line 68, ../sass/screen.scss */
+/* line 69, ../sass/screen.scss */
 header[role="banner"] h1 .isfor {
   font-size: 0.5em;
   color: #f38630;
@@ -129,36 +135,73 @@ header[role="banner"] h1 .isfor {
   top: -0.25em;
   letter-spacing: -1px;
 }
+/* line 77, ../sass/screen.scss */
+header[role="banner"] h1 .quote-lever {
+  font-size: 0.25em;
+  color: #f38630;
+  text-decoration: none;
+}
+/* line 82, ../sass/screen.scss */
+header[role="banner"] h1 .quote-lever:hover {
+  color: #fa6900;
+}
 
-/* line 78, ../sass/screen.scss */
+/* line 89, ../sass/screen.scss */
+.no-is-for-wimps {
+  display: none;
+  background-color: #265d5a;
+  color: #FAFAFA;
+  border-bottom: 3px solid #69d2e7;
+  padding: 0.25em;
+}
+/* line 96, ../sass/screen.scss */
+.no-is-for-wimps blockquote {
+  width: 720px;
+  margin: 1em auto;
+  font-family: "Georgia";
+  font-size: 1.2em;
+  line-height: 1.7em;
+}
+/* line 103, ../sass/screen.scss */
+.no-is-for-wimps blockquote:before {
+  content: "“";
+  font-size: 10em;
+  position: absolute;
+  margin-left: -0.5em;
+  margin-top: 0.3em;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
+  opacity: 0.2;
+}
+
+/* line 115, ../sass/screen.scss */
 .main-wrap {
   width: 960px;
   margin: 1em auto;
 }
 
-/* line 84, ../sass/screen.scss */
+/* line 121, ../sass/screen.scss */
 .jagged {
   background: transparent url(../images/jagged-paper.png) 0 0 repeat-x;
   height: 17px;
 }
 
-/* line 89, ../sass/screen.scss */
+/* line 126, ../sass/screen.scss */
 .jagged-bottom {
   -webkit-transform: rotateX(180deg);
   transform: rotateX(180deg);
 }
 
-/* line 93, ../sass/screen.scss */
+/* line 130, ../sass/screen.scss */
 section[role="main"] {
   background-color: white;
   padding: 1em;
 }
-/* line 97, ../sass/screen.scss */
+/* line 134, ../sass/screen.scss */
 section[role="main"] article {
   color: #333333;
   margin-bottom: 2em;
 }
-/* line 102, ../sass/screen.scss */
+/* line 139, ../sass/screen.scss */
 section[role="main"] article h2 {
   font-size: 2.5em;
   font-family: "League Gothic";
@@ -168,14 +211,14 @@ section[role="main"] article h2 {
   margin-top: 0em;
   border-radius: 5px;
 }
-/* line 112, ../sass/screen.scss */
+/* line 149, ../sass/screen.scss */
 section[role="main"] article figure {
   float: left;
   margin: 0 0.5em 0.5em 0;
   border: 3px solid #69d2e7;
 }
 
-/* line 121, ../sass/screen.scss */
+/* line 158, ../sass/screen.scss */
 footer[role="contentinfo"] {
   margin-top: 3em;
   background-color: #e0e4cc;
@@ -187,12 +230,12 @@ footer[role="contentinfo"] {
   color: gray;
 }
 
-/* line 133, ../sass/screen.scss */
+/* line 170, ../sass/screen.scss */
 .social-links {
   text-align: center;
   margin-top: 3em;
 }
-/* line 137, ../sass/screen.scss */
+/* line 174, ../sass/screen.scss */
 .social-links a {
   text-indent: -9999px;
   display: inline-block;
@@ -202,13 +245,13 @@ footer[role="contentinfo"] {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
   opacity: 0.3;
 }
-/* line 147, ../sass/screen.scss */
+/* line 184, ../sass/screen.scss */
 .social-links a:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
 
-/* line 152, ../sass/screen.scss */
+/* line 189, ../sass/screen.scss */
 .login-note {
   position: absolute;
   top: 0;
