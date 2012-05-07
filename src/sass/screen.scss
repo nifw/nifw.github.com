@@ -1,14 +1,3 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-
-@import "compass/reset";
-@import "compass/css3/transform";
-@import "compass/css3/opacity";
-@import "compass/css3/transition";
-@import "compass/css3/text-shadow";
-
 $headerbg: #E2E4CB;
 $bodybg: #C5D8D7;
 $bodycolor: #333;
@@ -18,13 +7,20 @@ $headercolor: #C07810;
 $headersoftcolor: #C49031;
 $mainbg: #FFFFFF;
 $main-width: 960px;
+$headerfont: "League Gothic";
 
-@font-face { font-family: "League Gothic"; src: url('../league-gothic.otf'); } 
+@font-face { font-family: "League Gothic"; src: url(../webfonts/league-gothic.ttf); } 
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+
+@import "compass/reset";
+@import "compass/css3/transform";
+@import "compass/css3/opacity";
+@import "compass/css3/transition";
+@import "compass/css3/text-shadow";
 
 body {
     background: transparent url(../images/noisy-blue-bg.png);
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-family: Lato, "Trebuchet MS", Arial, sans-serif;
     text-rendering: optimizeLegibility;
 }
 
@@ -67,7 +63,8 @@ header[role="banner"] {
         color: $headercolor;
         text-transform: uppercase;
         vertical-align: middle;
-        font-family: "League Gothic";
+        font-family: $headerfont;
+        min-width: 960px;
         
         .isfor {
             font-size: 0.5em;
@@ -99,7 +96,6 @@ header[role="banner"] {
     blockquote {
         width: $main-width * 0.75;
         margin: 1em auto;
-        font-family: "Georgia";
         font-size: 1.2em;
         line-height: 1.7em;
 
@@ -127,7 +123,7 @@ header[role="banner"] {
 }
 
 .jagged-bottom {
-    @include rotateX(180deg);
+    @include rotate(180deg);
 }
 
 section[role="main"] {
@@ -141,7 +137,7 @@ section[role="main"] {
         
         h2 {
             font-size: 2.5em;
-            font-family: "League Gothic";
+            font-family: $headerfont;
             letter-spacing: 2px;
             border-bottom: 3px solid $strikecolor;
             margin-bottom: 0.5em;
@@ -153,8 +149,58 @@ section[role="main"] {
             margin: 0 0.5em 0.5em 0;
             border: 3px solid $strikecolor;
         }
-        
+
+        &.apply {
+            text-align: center;
+            margin-top: 4em;
+            margin-bottom: 5em;
+
+            h3 {
+                color: $headercolor;
+                font-size: 4.5em;
+                font-family: $headerfont;
+                
+                .bullets {
+                    position: relative;
+                    top: -0.25em;
+                    padding: 0 0.25em;
+                    color: $headersoftcolor;
+                    font-size: 0.45em;
+                }
+
+                a {
+                    background-color: $bodybg;
+                    border: 3px solid $strikecolor;
+                    padding: 0.1em 0.25em;
+                    border-radius: 0.2em;
+                    text-decoration: none;
+                    
+                    .arrow {
+                        font-family: Futura;
+                        background-color: white;
+                        color: $linkcolor;
+                        border-radius: 20px;
+                        line-height: 20px;
+                        height: 35px;
+                        display: inline-block;
+                        font-size: 60px;
+                        position: relative;
+                        top: -8px;
+                        padding: 3px;
+                        padding-left: 5px;
+                    }
+
+                    &:hover {
+                        background-color: $linkcolor;
+                        border: 3px solid darken($linkcolor, 10%);
+                        color: white;
+                    }
+                }
+            }
+        }
     }
+
+
 }
 
 footer[role="contentinfo"] {
