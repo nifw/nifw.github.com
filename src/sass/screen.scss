@@ -49,6 +49,10 @@ li {
     list-style-type: disc;
 }
 
+h1, h2, h3, h4, h5, h5 {
+    font-family: $headerfont;
+}
+
 
 header[role="banner"] {
     background-image: url(../images/noisy-yellow-bg.png);
@@ -138,7 +142,6 @@ section[role="main"] {
         h2 {
             font-size: 2.5em;
             font-family: $headerfont;
-            letter-spacing: 2px;
             border-bottom: 3px solid $strikecolor;
             margin-bottom: 0.5em;
             margin-top: 0em;
