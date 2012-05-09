@@ -132,11 +132,11 @@ header[role="banner"] {
     @include rotate(180deg);
 }
 
-section[role="main"] {
+article[role="main"] {
     background-color: $mainbg;
     padding: 1em;
 
-    article {
+    section {
         color: $bodycolor;
         
         margin-bottom: 2em;
@@ -154,52 +154,52 @@ section[role="main"] {
             margin: 0 0.5em 0.5em 0;
             border: 3px solid $strikecolor;
         }
+    }
 
-        &.apply {
-            text-align: center;
-            margin-top: 4em;
-            margin-bottom: 5em;
+    .apply {
+        text-align: center;
+        margin-top: 4em;
+        margin-bottom: 5em;
 
-            h3 {
-                color: $headercolor;
-                font-size: 4.5em;
-                font-family: $headerfont;
+        h3 {
+            color: $headercolor;
+            font-size: 4.5em;
+            font-family: $headerfont;
+            
+            .bullets {
+                position: relative;
+                top: -0.25em;
+                padding: 0 0.25em;
+                color: $headersoftcolor;
+                font-size: 0.45em;
+            }
+
+            a {
+                background-color: $bodybg;
+                border: 3px solid $strikecolor;
+                padding: 0.1em 0.25em;
+                border-radius: 0.2em;
+                text-decoration: none;
                 
-                .bullets {
+                .arrow {
+                    font-family: Futura;
+                    background-color: white;
+                    color: $linkcolor;
+                    border-radius: 20px;
+                    line-height: 20px;
+                    height: 35px;
+                    display: inline-block;
+                    font-size: 60px;
                     position: relative;
-                    top: -0.25em;
-                    padding: 0 0.25em;
-                    color: $headersoftcolor;
-                    font-size: 0.45em;
+                    top: -8px;
+                    padding: 3px;
+                    padding-left: 5px;
                 }
 
-                a {
-                    background-color: $bodybg;
-                    border: 3px solid $strikecolor;
-                    padding: 0.1em 0.25em;
-                    border-radius: 0.2em;
-                    text-decoration: none;
-                    
-                    .arrow {
-                        font-family: Futura;
-                        background-color: white;
-                        color: $linkcolor;
-                        border-radius: 20px;
-                        line-height: 20px;
-                        height: 35px;
-                        display: inline-block;
-                        font-size: 60px;
-                        position: relative;
-                        top: -8px;
-                        padding: 3px;
-                        padding-left: 5px;
-                    }
-
-                    &:hover {
-                        background-color: $linkcolor;
-                        border: 3px solid darken($linkcolor, 10%);
-                        color: white;
-                    }
+                &:hover {
+                    background-color: $linkcolor;
+                    border: 3px solid darken($linkcolor, 10%);
+                    color: white;
                 }
             }
         }

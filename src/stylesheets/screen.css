@@ -200,17 +200,17 @@ header[role="banner"] h1 .quote-lever:hover {
 }
 
 /* line 135, ../sass/screen.scss */
-section[role="main"] {
+article[role="main"] {
   background-color: white;
   padding: 1em;
 }
 /* line 139, ../sass/screen.scss */
-section[role="main"] article {
+article[role="main"] section {
   color: #333333;
   margin-bottom: 2em;
 }
 /* line 144, ../sass/screen.scss */
-section[role="main"] article h2 {
+article[role="main"] section h2 {
   font-size: 2.5em;
   font-family: "League Gothic";
   border-bottom: 3px solid #aacde6;
@@ -218,41 +218,41 @@ section[role="main"] article h2 {
   margin-top: 0em;
 }
 /* line 152, ../sass/screen.scss */
-section[role="main"] article figure {
+article[role="main"] section figure {
   float: left;
   margin: 0 0.5em 0.5em 0;
   border: 3px solid #aacde6;
 }
-/* line 158, ../sass/screen.scss */
-section[role="main"] article.apply {
+/* line 159, ../sass/screen.scss */
+article[role="main"] .apply {
   text-align: center;
   margin-top: 4em;
   margin-bottom: 5em;
 }
-/* line 163, ../sass/screen.scss */
-section[role="main"] article.apply h3 {
+/* line 164, ../sass/screen.scss */
+article[role="main"] .apply h3 {
   color: #c07810;
   font-size: 4.5em;
   font-family: "League Gothic";
 }
-/* line 168, ../sass/screen.scss */
-section[role="main"] article.apply h3 .bullets {
+/* line 169, ../sass/screen.scss */
+article[role="main"] .apply h3 .bullets {
   position: relative;
   top: -0.25em;
   padding: 0 0.25em;
   color: #c49031;
   font-size: 0.45em;
 }
-/* line 176, ../sass/screen.scss */
-section[role="main"] article.apply h3 a {
+/* line 177, ../sass/screen.scss */
+article[role="main"] .apply h3 a {
   background-color: #c5d8d7;
   border: 3px solid #aacde6;
   padding: 0.1em 0.25em;
   border-radius: 0.2em;
   text-decoration: none;
 }
-/* line 183, ../sass/screen.scss */
-section[role="main"] article.apply h3 a .arrow {
+/* line 184, ../sass/screen.scss */
+article[role="main"] .apply h3 a .arrow {
   font-family: Futura;
   background-color: white;
   color: #3887bf;
@@ -266,8 +266,8 @@ section[role="main"] article.apply h3 a .arrow {
   padding: 3px;
   padding-left: 5px;
 }
-/* line 198, ../sass/screen.scss */
-section[role="main"] article.apply h3 a:hover {
+/* line 199, ../sass/screen.scss */
+article[role="main"] .apply h3 a:hover {
   background-color: #3887bf;
   border: 3px solid #2d6b97;
   color: white;
