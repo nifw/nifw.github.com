@@ -264,7 +264,7 @@ article[role="main"] .apply h3 {
 }
 /* line 187, ../sass/screen.scss */
 article[role="main"] .apply h3 .bullets:before {
-  content: " • • • • • • • • • • • • • ";
+  content: " • • • • • • • • • • ";
 }
 /* line 191, ../sass/screen.scss */
 article[role="main"] .apply h3 .bullets {
