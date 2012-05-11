@@ -10,11 +10,11 @@
 </head>
 <body>
     <header role="banner">
-        <h1>No<span class="isfor"> is for </span>Wimps<a href="#" class="quote-lever">&hellip;</a></h1>
+        <h1>No<span class="isfor"> is for </span>Wimps<a href="#" class="quote-lever">...</a></h1>
     </header>
 
-    <aside id="no-is-for-wimps" class="no-is-for-wimps">
-        <blockquote>
+    <aside id="no-is-for-wimps" class="no-is-for-wimps" role="complementary">
+        <blockquote cite="http://www.armchairnews.com/freelance/eggers.html">
             <p><strong>No is for wimps. No is for pussies. No is to live
             small and embittered, cherishing the opportunities you missed because
             they might have sent the wrong message.</strong></p>
@@ -70,7 +70,9 @@
             for saying yes, I say Oh do it, do it you motherfuckers, finally,
             finally, finally.</p>
         
-            <p>&mdash;Dave Eggers</p>
+            <footer>
+                &mdash; <a href="http://www.armchairnews.com/freelance/eggers.html">Dave Eggers</a>, in an interview with the Harvard Advocate</p>
+            </footer>
         </blockquote>
     </aside>
 
@@ -112,13 +114,11 @@
                         consequat.
                     </p>
             </section>
-            <div class="apply">
+            <section class="apply">
                 <h3>
-                    Interested?<span class="bullets" role="presentation"> 
-                        &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; 
-                    </span><a href="mailto:noisforwimps@gmail.com?subject=I%20would%20like%20to%20make%20awesome%20things%20this%20summer.">Apply! <span class="arrow" role="presentation">&raquo;</span></a>
+                    Interested?<span class="bullets" role="presentation"></span><a href="mailto:noisforwimps@gmail.com?subject=I%20would%20like%20to%20make%20awesome%20things%20this%20summer.">Apply! <span class="arrow" role="presentation">&raquo;</span></a>
                 </h3>
-            </div>
+            </section>
         </article>
         <div class="jagged jagged-bottom" role="presentation"></div>
     </div>
@@ -132,15 +132,21 @@
     </aside>
 
     <footer role="contentinfo">
-        Design and Content &copy; 2012 Jen Dary. Make awesome things. Fonts provided by <a href="http://www.theleagueofmoveabletype.com/">The League of Movable Type</a>.
+        Design and Content &copy; 2012 Jen Dary. Make awesome things. Fonts provided by <a href="http://www.theleagueofmoveabletype.com/">The League of Movable Type</a> and <a href="http://www.typoland.com/">tyPoland</a>.
     </footer>
 
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript">
-        $('a.quote-lever').click(function() {
-            $('#no-is-for-wimps').slideToggle();
-            return false;
-        });
+        if ('querySelector' in document) {
+            var body = document.body;
+            document.querySelector('a.quote-lever').onclick = function() {
+                if (body.className.indexOf('lever-on') != -1) {
+                    body.className = body.className.replace(' lever-on', '');
+                } else {
+                    body.className += ' lever-on';
+                }
+            }
+            
+        }
     </script>
 </body>
 </html>

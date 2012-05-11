@@ -70,7 +70,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 21, ../sass/screen.scss */
+/* line 22, ../sass/screen.scss */
 body {
   background: transparent url(../images/noisy-blue-bg.png);
   font-family: Lato, "Trebuchet MS", Arial, sans-serif;
@@ -78,52 +78,52 @@ body {
   font-size: 16px;
 }
 
-/* line 28, ../sass/screen.scss */
+/* line 29, ../sass/screen.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 32, ../sass/screen.scss */
+/* line 33, ../sass/screen.scss */
 p {
   margin: 0 0 1.4em 0;
 }
 
-/* line 36, ../sass/screen.scss */
+/* line 37, ../sass/screen.scss */
 p, li {
   line-height: 1.4;
 }
 
-/* line 40, ../sass/screen.scss */
+/* line 41, ../sass/screen.scss */
 a {
   color: #3887bf;
   font-weight: bold;
   text-decoration: none;
 }
 
-/* line 46, ../sass/screen.scss */
+/* line 47, ../sass/screen.scss */
 ul {
   padding-left: 1em;
   margin: 1em 0 1em 2em;
 }
 
-/* line 51, ../sass/screen.scss */
+/* line 52, ../sass/screen.scss */
 li {
   list-style-type: disc;
 }
 
-/* line 55, ../sass/screen.scss */
+/* line 56, ../sass/screen.scss */
 h1, h2, h3, h4, h5, h5 {
   font-family: "League Gothic";
 }
 
-/* line 60, ../sass/screen.scss */
+/* line 61, ../sass/screen.scss */
 header[role="banner"] {
   background-image: url(../images/noisy-yellow-bg.png);
   height: 12em;
   border-bottom: 0.25em solid #aacde6;
   padding-top: 2em;
 }
-/* line 66, ../sass/screen.scss */
+/* line 67, ../sass/screen.scss */
 header[role="banner"] h1 {
   text-shadow: rgba(0, 0, 0, 0.3) 1px 1px 1px;
   text-align: center;
@@ -132,9 +132,10 @@ header[role="banner"] h1 {
   text-transform: uppercase;
   vertical-align: middle;
   font-family: "League Gothic";
-  min-width: 960px;
+  min-width: 760px;
+  margin-left: 0.125em;
 }
-/* line 76, ../sass/screen.scss */
+/* line 78, ../sass/screen.scss */
 header[role="banner"] h1 .isfor {
   font-size: 0.5em;
   color: #c49031;
@@ -142,33 +143,48 @@ header[role="banner"] h1 .isfor {
   top: -0.25em;
   letter-spacing: -1px;
 }
-/* line 84, ../sass/screen.scss */
+/* line 86, ../sass/screen.scss */
 header[role="banner"] h1 .quote-lever {
+  -webkit-transition: opacity 0.25s linear;
+  -webkit-transition-delay: 0;
+  -moz-transition: opacity 0.25s linear 0;
+  -ms-transition: opacity 0.25s linear 0;
+  -o-transition: opacity 0.25s linear 0;
+  transition: opacity 0.25s linear 0;
   font-size: 0.25em;
-  color: #c49031;
-  text-decoration: none;
-}
-/* line 89, ../sass/screen.scss */
-header[role="banner"] h1 .quote-lever:hover {
   color: #c07810;
+  text-decoration: none;
+  opacity: 0.15;
+}
+/* line 93, ../sass/screen.scss */
+header[role="banner"] h1 .quote-lever:hover, header[role="banner"] h1 .quote-lever:focus {
+  opacity: 1;
 }
 
-/* line 96, ../sass/screen.scss */
+/* line 101, ../sass/screen.scss */
 .no-is-for-wimps {
-  display: none;
+  -webkit-transition: all 0.25s linear;
+  -webkit-transition-delay: 0;
+  -moz-transition: all 0.25s linear 0;
+  -ms-transition: all 0.25s linear 0;
+  -o-transition: all 0.25s linear 0;
+  transition: all 0.25s linear 0;
+  height: 0;
+  overflow: hidden;
   background-color: #405e5d;
   color: #FAFAFA;
   border-bottom: 3px solid #aacde6;
-  padding: 0.25em;
+  padding: 0em;
 }
-/* line 103, ../sass/screen.scss */
+/* line 110, ../sass/screen.scss */
 .no-is-for-wimps blockquote {
   width: 570px;
   margin: 1em auto;
-  font-size: 1.2em;
+  font-size: 1.1em;
   line-height: 1.7em;
+  overflow: auto;
 }
-/* line 109, ../sass/screen.scss */
+/* line 117, ../sass/screen.scss */
 .no-is-for-wimps blockquote:before {
   content: "“";
   font-size: 10em;
@@ -178,20 +194,30 @@ header[role="banner"] h1 .quote-lever:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
   opacity: 0.2;
 }
+/* line 126, ../sass/screen.scss */
+.no-is-for-wimps blockquote a {
+  color: #FAFAFA;
+  text-decoration: underline;
+}
 
-/* line 121, ../sass/screen.scss */
+/* line 134, ../sass/screen.scss */
+body.lever-on .no-is-for-wimps {
+  height: 83em;
+}
+
+/* line 138, ../sass/screen.scss */
 .main-wrap {
   width: 760px;
   margin: 1em auto;
 }
 
-/* line 127, ../sass/screen.scss */
+/* line 144, ../sass/screen.scss */
 .jagged {
   background: transparent url(../images/jagged-paper.png) 0 0 repeat-x;
   height: 10px;
 }
 
-/* line 132, ../sass/screen.scss */
+/* line 149, ../sass/screen.scss */
 .jagged-bottom {
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
@@ -200,17 +226,17 @@ header[role="banner"] h1 .quote-lever:hover {
   transform: rotate(180deg);
 }
 
-/* line 136, ../sass/screen.scss */
+/* line 153, ../sass/screen.scss */
 article[role="main"] {
   background-color: white;
   padding: 1em;
 }
-/* line 140, ../sass/screen.scss */
+/* line 157, ../sass/screen.scss */
 article[role="main"] section {
   color: #333333;
   margin-bottom: 2em;
 }
-/* line 145, ../sass/screen.scss */
+/* line 162, ../sass/screen.scss */
 article[role="main"] section h2 {
   font-size: 2.5em;
   font-family: "League Gothic";
@@ -218,25 +244,29 @@ article[role="main"] section h2 {
   margin-bottom: 0.5em;
   margin-top: 0em;
 }
-/* line 153, ../sass/screen.scss */
+/* line 170, ../sass/screen.scss */
 article[role="main"] section figure {
   float: left;
   margin: 0 0.5em 0.5em 0;
   border: 3px solid #aacde6;
 }
-/* line 160, ../sass/screen.scss */
+/* line 177, ../sass/screen.scss */
 article[role="main"] .apply {
   text-align: center;
   margin-top: 4em;
   margin-bottom: 5em;
 }
-/* line 165, ../sass/screen.scss */
+/* line 182, ../sass/screen.scss */
 article[role="main"] .apply h3 {
   color: #c07810;
   font-size: 4.5em;
   font-family: "League Gothic";
 }
-/* line 170, ../sass/screen.scss */
+/* line 187, ../sass/screen.scss */
+article[role="main"] .apply h3 .bullets:before {
+  content: " • • • • • • • • • • • • • ";
+}
+/* line 191, ../sass/screen.scss */
 article[role="main"] .apply h3 .bullets {
   position: relative;
   top: -0.25em;
@@ -244,15 +274,16 @@ article[role="main"] .apply h3 .bullets {
   color: #c49031;
   font-size: 0.45em;
 }
-/* line 178, ../sass/screen.scss */
+/* line 199, ../sass/screen.scss */
 article[role="main"] .apply h3 a {
   background-color: #c5d8d7;
   border: 3px solid #aacde6;
   padding: 0.1em 0.25em;
   border-radius: 0.2em;
   text-decoration: none;
+  font-weight: normal;
 }
-/* line 185, ../sass/screen.scss */
+/* line 207, ../sass/screen.scss */
 article[role="main"] .apply h3 a .arrow {
   font-family: Futura;
   background-color: white;
@@ -267,14 +298,14 @@ article[role="main"] .apply h3 a .arrow {
   padding: 3px;
   padding-left: 5px;
 }
-/* line 200, ../sass/screen.scss */
+/* line 222, ../sass/screen.scss */
 article[role="main"] .apply h3 a:hover {
   background-color: #3887bf;
   border: 3px solid #2d6b97;
   color: white;
 }
 
-/* line 212, ../sass/screen.scss */
+/* line 234, ../sass/screen.scss */
 footer[role="contentinfo"] {
   margin-top: 3em;
   background-image: url(../images/noisy-yellow-bg.png);
@@ -286,28 +317,28 @@ footer[role="contentinfo"] {
   color: gray;
 }
 
-/* line 224, ../sass/screen.scss */
+/* line 246, ../sass/screen.scss */
 .social-links {
   text-align: center;
   margin-top: 3em;
 }
-/* line 228, ../sass/screen.scss */
+/* line 250, ../sass/screen.scss */
 .social-links a {
   text-indent: -9999px;
   display: inline-block;
   width: 42px;
   height: 40px;
   background: transparent url(../images/twitterbird-white.png) center center no-repeat;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
-  opacity: 0.3;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
 }
-/* line 238, ../sass/screen.scss */
+/* line 260, ../sass/screen.scss */
 .social-links a:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
 
-/* line 243, ../sass/screen.scss */
+/* line 265, ../sass/screen.scss */
 aside[role="note"]:before {
   background: transparent url(../images/jagged-paper.png) 0 0 repeat-x;
   display: inline-block;
@@ -323,7 +354,7 @@ aside[role="note"]:before {
   transform: rotate(270deg);
 }
 
-/* line 254, ../sass/screen.scss */
+/* line 276, ../sass/screen.scss */
 aside[role="note"] {
   position: absolute;
   top: 0;
@@ -337,7 +368,7 @@ aside[role="note"] {
   color: #c07810;
 }
 
-/* line 267, ../sass/screen.scss */
+/* line 289, ../sass/screen.scss */
 aside[role="note"] a {
   padding-left: 4px;
 }
