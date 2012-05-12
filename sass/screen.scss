@@ -6,7 +6,7 @@ $linkcolor: darken($strikecolor, 30%);
 $headercolor: #C07810;
 $headersoftcolor: #C49031;
 $mainbg: #FFFFFF;
-$main-width: 960px;
+$main-width: 760px;
 $headerfont: "League Gothic";
 
 @font-face { font-family: "League Gothic"; src: url(../webfonts/league-gothic.ttf); } 
@@ -17,11 +17,13 @@ $headerfont: "League Gothic";
 @import "compass/css3/opacity";
 @import "compass/css3/transition";
 @import "compass/css3/text-shadow";
+@import "compass/css3/transition";
 
 body {
     background: transparent url(../images/noisy-blue-bg.png);
     font-family: Lato, "Trebuchet MS", Arial, sans-serif;
     text-rendering: optimizeLegibility;
+    font-size: 16px;
 }
 
 strong {
@@ -70,7 +72,8 @@ header[role="banner"] {
         text-transform: uppercase;
         vertical-align: middle;
         font-family: $headerfont;
-        min-width: 960px;
+        min-width: $main-width;
+        margin-left: 0.125em;
         
         .isfor {
             font-size: 0.5em;
@@ -81,29 +84,35 @@ header[role="banner"] {
         }
         
         .quote-lever {
+            @include single-transition(opacity, 0.25s, linear, 0);
             font-size: 0.25em;
-            color: $headersoftcolor;
+            color: $headercolor;
             text-decoration: none;
+            opacity: 0.15;
             
-            &:hover {
-                color: $headercolor;
+            &:hover, &:focus {
+                opacity: 1;
             }
+
         }
     }
 }
 
 .no-is-for-wimps {
-    display: none;
+    @include single-transition(all, 0.25s, linear, 0);
+    height: 0;
+    overflow: hidden;
     background-color: darken($bodybg, 50%);
     color: #FAFAFA;
     border-bottom: 3px solid $strikecolor;
-    padding: 0.25em;
+    padding: 0em;
     
     blockquote {
         width: $main-width * 0.75;
         margin: 1em auto;
-        font-size: 1.2em;
+        font-size: 1.1em;
         line-height: 1.7em;
+        overflow: auto;
 
         &:before {
             content: "“";
@@ -113,8 +122,17 @@ header[role="banner"] {
             margin-top: 0.3em;
             @include opacity(0.2);
         }
+        
+        a {
+            color: #FAFAFA;
+            text-decoration: underline;
+        }
 
     }
+}
+
+body.lever-on .no-is-for-wimps {
+    height: 83em;
 }
 
 .main-wrap {
@@ -125,7 +143,7 @@ header[role="banner"] {
 
 .jagged {
     background: transparent url(../images/jagged-paper.png) 0 0 repeat-x;
-    height: 17px;
+    height: 10px;
 }
 
 .jagged-bottom {
@@ -165,6 +183,10 @@ article[role="main"] {
             color: $headercolor;
             font-size: 4.5em;
             font-family: $headerfont;
+
+            .bullets:before {
+                content: " • • • • • • • • • • ";
+            }
             
             .bullets {
                 position: relative;
@@ -180,6 +202,7 @@ article[role="main"] {
                 padding: 0.1em 0.25em;
                 border-radius: 0.2em;
                 text-decoration: none;
+                font-weight: normal;
                 
                 .arrow {
                     font-family: Futura;
@@ -230,7 +253,7 @@ footer[role="contentinfo"] {
         width: 42px;
         height: 40px;
         background: transparent url(../images/twitterbird-white.png) center center no-repeat;
-        @include opacity(0.3);
+        @include opacity(0.5);
         
     }
     
@@ -243,7 +266,7 @@ aside[role="note"]:before {
     background: transparent url(../images/jagged-paper.png) 0 0 repeat-x;
     display: inline-block;
     position: absolute;
-    margin-left: -17px;
+    margin-left: -10px;
     width: 20px;
     height: 20px;
     content: "";
