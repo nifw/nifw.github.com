@@ -6,7 +6,7 @@ $linkcolor: darken($strikecolor, 30%);
 $headercolor: #C07810;
 $headersoftcolor: #C49031;
 $mainbg: #FFFFFF;
-$main-width: 760px;
+$main-width: 720px;
 $headerfont: "League Gothic";
 
 @font-face { font-family: "League Gothic"; src: url(../webfonts/league-gothic.ttf); } 
@@ -152,13 +152,13 @@ body.lever-on .no-is-for-wimps {
 
 article[role="main"] {
     background-color: $mainbg;
-    padding: 1em;
+    padding: 1em 2em;
 
     section {
         color: $bodycolor;
         
         margin-bottom: 2em;
-        
+
         h2 {
             font-size: 2.5em;
             font-family: $headerfont;
@@ -181,7 +181,8 @@ article[role="main"] {
 
         h3 {
             color: $headercolor;
-            font-size: 4.5em;
+            font-size: 4.25em;
+            white-space: nowrap;
             font-family: $headerfont;
 
             .bullets:before {
