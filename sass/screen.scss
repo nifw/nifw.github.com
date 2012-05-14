@@ -9,6 +9,11 @@ $mainbg: #FFFFFF;
 $main-width: 720px;
 $headerfont: "League Gothic";
 
+@font-face {
+  font-family: 'League Gothic';
+  src: url('../webfonts/league-gothic.eot?') format('eot'), url('../webfonts/league-gothic.woff') format('woff'), url('../webfonts/league-gothic.ttf') format('truetype');
+}
+
 @font-face { font-family: "League Gothic"; src: url(../webfonts/league-gothic.ttf); } 
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 
@@ -174,6 +179,33 @@ article[role="main"] {
         }
     }
 
+    .project-bullets {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: $main-width/11;
+        
+        li {
+            float: left;
+            width: $main-width/5;
+            background-color: lighten($bodybg, 10%);
+            padding: 0.5em;
+            border-radius: 4px;
+            list-style-type: none;
+            margin: 0.5em ($main-width/50) 0.5em 0;
+            text-align: center;
+            font-family: $headerfont;
+            text-transform: uppercase;
+            font-size: 1.25em;
+            letter-spacing: 1px;
+        }
+        
+        &:after {
+            clear: both;
+            display: block;
+            content: "";
+        }
+    }
+
     .apply {
         text-align: center;
         margin-top: 4em;
@@ -181,12 +213,12 @@ article[role="main"] {
 
         h3 {
             color: $headercolor;
-            font-size: 4.25em;
+            font-size: 3em;
             white-space: nowrap;
             font-family: $headerfont;
 
             .bullets:before {
-                content: " • • • • • • • • • • ";
+                content: " • • • • • • • • • • • • • • • • • • • ";
             }
             
             .bullets {
@@ -209,15 +241,16 @@ article[role="main"] {
                     font-family: Futura;
                     background-color: white;
                     color: $linkcolor;
-                    border-radius: 20px;
+                    border-radius: 18px;
                     line-height: 20px;
-                    height: 35px;
+                    height: 32px;
                     display: inline-block;
-                    font-size: 60px;
+                    font-size: 42px;
                     position: relative;
-                    top: -8px;
+                    top: -5px;
                     padding: 3px;
-                    padding-left: 5px;
+                    padding-left: 7px;
+                    padding-right: 6px;
                 }
 
                 &:hover {
