@@ -300,7 +300,7 @@ aside[role="note"]:before {
     background: transparent url(../images/jagged-paper.png) 0 0 repeat-x;
     display: inline-block;
     position: absolute;
-    margin-left: -10px;
+    margin-left: -15px;
     width: 20px;
     height: 20px;
     content: "";
@@ -314,7 +314,8 @@ aside[role="note"] {
     height: 20px;
     display: block;
     line-height: 20px;
-    padding-right: 20px;
+    padding-right: 15px;
+    padding-left: 5px;
     background-color: $mainbg;
     font-size: 0.75em;
     color: $headercolor;
