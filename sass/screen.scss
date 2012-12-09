@@ -185,8 +185,18 @@ article[role="main"] {
 
         figure {
             float: left;
-            margin: 0 0.5em 0.5em 0;
+            margin: 0 7px 7px 0;
             border: 3px solid $strikecolor;
+            font-size: 1px;
+
+            &.book {
+                float: right;
+                margin: 0 0 7px 7px;
+
+                img {
+                   width: 160px;
+               }
+            }
         }
     }
 
@@ -306,6 +316,13 @@ footer[role="contentinfo"] {
         @include opacity(1);
     }
 }
+
+aside.current-offering {
+    font-size: 0.75em;
+    color: $headercolor;
+    padding-bottom: 5px;
+}
+
 
 aside[role="note"]:before {
     background: transparent url(../images/jagged-paper.png) 0 0 repeat-x;
