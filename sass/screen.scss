@@ -3,6 +3,7 @@ $bodybg: #C5D8D7;
 $bodycolor: #333;
 $strikecolor: #AACDE6;
 $linkcolor: darken($strikecolor, 30%);
+$strikebg: lighten($strikecolor, 15%);
 $headercolor: #C07810;
 $headersoftcolor: #C49031;
 $mainbg: #FFFFFF;
@@ -165,6 +166,13 @@ body.lever-on .no-is-for-wimps {
     @include rotate(180deg);
 }
 
+h3 {
+    color: $headercolor;
+    font-size: 3em;
+    white-space: nowrap;
+    font-family: $headerfont;
+}
+
 article[role="main"] {
     background-color: $mainbg;
     padding: 1em 2em;
@@ -227,17 +235,20 @@ article[role="main"] {
         }
     }
 
+    .amazon-pay {
+        text-align: center;
+
+        .amazon-form {
+            margin-top: 20px;
+        }
+    }
+
     .apply {
         text-align: center;
         margin-top: 4em;
         margin-bottom: 5em;
 
         h3 {
-            color: $headercolor;
-            font-size: 3em;
-            white-space: nowrap;
-            font-family: $headerfont;
-
             .bullets:before {
                 content: " • • • • • • • • • • • • • • • • • • • ";
             }
@@ -314,6 +325,22 @@ footer[role="contentinfo"] {
     
     a:hover {
         @include opacity(1);
+    }
+}
+
+.previous-offerings table {
+    width: 100%;
+    border: 3px solid $strikecolor;
+
+    th, td {
+        padding: 5px;
+        font-size: 0.8em;
+        border-bottom: 1px solid $strikecolor;
+    }
+
+    thead {
+        background-color: $strikebg;
+        border-bottom: 2px solid $strikecolor;
     }
 }
 
